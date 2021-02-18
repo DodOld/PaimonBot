@@ -16,7 +16,7 @@ module.exports = class extends Command {
 	async run(message, [user]) {
 		const target = this.client.utils.getMember(message, user);
 		const balance = await this.client.economy.getBalance(message.guild.id, target.id);
-		console.log(balance);
+
 		const balanceEmbed = new MessageEmbed()
 			.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }))
 			.addFields(
