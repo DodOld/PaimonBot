@@ -17,8 +17,8 @@
         "duplicates": false
     },
     "weapon": {
-        "equipped": "Hunter's Bow",
-        "type": "Bow"
+        "equipped": "hunters bow",
+        "type": "bow"
     },
     "artifacts": {
         "Flower": "",
@@ -70,4 +70,5 @@
         }
 
     }
+
 }

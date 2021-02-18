@@ -3,5 +3,72 @@
     "slug": "barbara",
     "image": "https://imgur.com/K6mmoLn.png",
     "vision": "hydro",
-    "rarity": 4
+    "rarity": 4,
+    "stats": {
+        "ascensionphase": 0,
+        "level": 1,
+        "hp": 821,
+        "atk": 13,
+        "def": 56,
+        "constellation": 0
+
+    },
+    "obtained": {
+        "duplicates": false
+    },
+    "weapon": {
+        "equipped": "apprentices notes",
+        "type": "catalyst"
+    },
+    "artifacts": {
+        "Flower": "",
+        "Plume": "",
+        "Sands": "",
+        "Goblet": "",
+        "Circlet": ""
+    },
+    "moveset": {
+
+    },
+    "talents": {
+        "Whisper of Water": {
+
+        },
+        "Let The Show Begin": {
+
+        },
+        "Shining Miracle": {
+
+        },
+        "Glorious Season": {
+        },
+        "Encore": {
+
+        },
+        "With My Whole Heart": {
+
+        }
+    },
+    "constellations": {
+        "Gleeful Songs": {
+
+        },
+        "Vitality Burst": {
+
+        },
+        "Star of Tomorrow": {
+
+        },
+        "Attentiveness be My Power": {
+
+        },
+        "The Purest Companionship": {
+
+        },
+        "Dedicating Everything to You": {
+
+        }
+
+    }
+
 }
