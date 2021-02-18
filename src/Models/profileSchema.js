@@ -16,7 +16,9 @@ const profileSchema = mongoose.Schema({
 	stardust: { type: Number, required: true, default: 0 },
 	starglitter: { type: Number, required: true, default: 0 },
 	resin: { type: Number, required: true, default: 160 },
-	characters: []
+	characters: [],
+	lastDaily: {},
+	lastWeekly: {}
 
 
 });

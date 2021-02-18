@@ -12,24 +12,30 @@ module.exports.characters = async (search) => {
 };
 
 module.exports.weapons = async (search) => {
-	const json = require(`./characters/${search}`);
-	if (!json) return;
-
-	return json;
+	try {
+		const json = require(`./weapons/${search}`);
+		return json;
+	} catch (err) {
+		return null;
+	}
 };
 
 module.exports.elements = async (search) => {
-	const json = require(`./elements/${search}`);
-	if (!json) return;
-
-	return json;
+	try {
+		const json = require(`./elements/${search}`);
+		return json;
+	} catch (err) {
+		return null;
+	}
 };
 
 module.exports.potions = async (search) => {
-	const json = require(`./potions/${search}`);
-	if (!json) return;
-
-	return json;
+	try {
+		const json = require(`./potions/${search}`);
+		return json;
+	} catch (err) {
+		return null;
+	}
 };
 
 module.exports.fetchCharacters = async () => {
