@@ -12,7 +12,7 @@ const reqInteger = {
 };
 
 const profileSchema = mongoose.Schema({
-	guildId: reqString,
+	userId: reqString,
 	minXPGain: { reqInteger, default: 1 },
 	maxXPGain: { reqInteger, default: 30 }
 
