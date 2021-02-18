@@ -20,7 +20,6 @@ const profileSchema = mongoose.Schema({
 	lastDaily: {},
 	lastWeekly: {}
 
-
 });
 
 module.exports = mongoose.model('profile', profileSchema, 'profiles');
