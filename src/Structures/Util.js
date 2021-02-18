@@ -75,19 +75,6 @@ module.exports = class Util {
 		return member.roles.highest.position < target.roles.highest.position;
 	}
 
-	getRole(role, guild) {
-		if (!role) return null;
-
-		if (/^[0-9]+$/.test(role)) {
-			return guild.roles.cache.get(role);
-		} else if (/^<@&[0-9]+>$/.test(role)) {
-			const id = role.substring(3, role.length - 1);
-			return guild.roles.cache.get(id);
-		}
-
-		return guild.roles.cache.find(mention => mention.name.toLowerCase() === role.toLowerCase());
-	}
-
 	getChannel(ch, guild) {
 		if (!ch) return null;
 
@@ -129,25 +116,6 @@ module.exports = class Util {
 		return (hr > 1 ? `${Math.floor(hr)}h ` : '') + (min > 1 ? `${Math.floor(min)}m ` : '') + ((min === 0) || sec > 1 || ms > 0 ? `${Math.floor(sec)}s` : '');
 	}
 
-	formatPerms(perm) {
-		return perm
-			.toArray()
-			.join(', ')
-			.toLowerCase()
-			.replace(/_/g, ' ')
-			.replace(/Guild/g, 'Server')
-			.replace(/Use Vad/g, 'Use Voice Activity');
-	}
-
-	formatPermissions(perm) {
-		return perm
-			.toLowerCase()
-			.replace(/(^|"|_)(\S)/g, (letter) => letter.toUpperCase())
-			.replace(/_/g, ' ')
-			.replace(/Guild/g, 'Server')
-			.replace(/Use Vad/g, 'Use Voice Acitvity');
-	}
-
 	formatArray(array, type = 'conjunction') {
 		return new Intl.ListFormat('en-GB', {
 			style: 'short',
@@ -168,19 +136,6 @@ module.exports = class Util {
 
 	randomRange(max) {
 		return Math.floor(Math.random() * max) + 1;
-	}
-
-	async promptMessage(message, author, time, validReactions) {
-		time *= 1000;
-
-		for (const reaction of validReactions) await message.react(reaction);
-		const filter = (reaction, user) => validReactions.includes(reaction.emoji.name) && user.id === author.id;
-		return message
-			.awaitReactions(filter, {
-				max: 1,
-				time: time
-			})
-			.then(collected => collected.first() && collected.first().emoji.name);
 	}
 
 	getMember(message, toFind = '') {
@@ -210,6 +165,11 @@ module.exports = class Util {
 		}
 
 		return target;
+	}
+
+	sortElement(charArray) {
+		charArray.sort((a, b) => a.vision > b.vision ? 1 : -1);
+		return charArray;
 	}
 
 	timeout(userId, commandName) {
