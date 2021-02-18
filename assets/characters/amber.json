@@ -3,5 +3,71 @@
     "slug": "amber",
     "image": "https://imgur.com/O4MjtL4.png",
     "vision": "pyro",
-    "rarity": 4
+    "rarity": 4,
+    "stats": {
+        "ascensionphase": 0,
+        "level": 1,
+        "hp": 793,
+        "atk": 19,
+        "def": 50,
+        "constellation": 0
+
+    },
+    "obtained": {
+        "duplicates": false
+    },
+    "weapon": {
+        "equipped": "Hunter's Bow",
+        "type": "Bow"
+    },
+    "artifacts": {
+        "Flower": "",
+        "Plume": "",
+        "Sands": "",
+        "Goblet": "",
+        "Circlet": ""
+    },
+    "moveset": {
+
+    },
+    "talents": {
+        "Sharpshooter": {
+
+        },
+        "Explosive Puppet": {
+
+        },
+        "Fiery Rain": {
+
+        },
+        "Every Arrow Finds Its Target": {
+        },
+        "Precise Shot": {
+
+        },
+        "Gliding Champion": {
+
+        }
+    },
+    "constellations": {
+        "One Arrow to Rule Them All": {
+
+        },
+        "Bunny Triggered": {
+
+        },
+        "It Burns!": {
+
+        },
+        "It's Not Just Any Doll": {
+
+        },
+        "It's Baron Bunny!": {
+
+        },
+        "Wildfire": {
+
+        }
+
+    }
 }
