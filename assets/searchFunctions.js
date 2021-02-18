@@ -1,11 +1,14 @@
-/* eslint-disable func-names */
 /* eslint-disable consistent-return */
+/* eslint-disable func-names */
+const fs = require('fs');
 
-module.exports.characters = async function (search) {
-	const json = require(`./characters/${search}`);
-	if (!json) return null;
-
-	return json;
+module.exports.characters = async (search) => {
+	try {
+		const json = require(`./characters/${search}`);
+		return json;
+	} catch (err) {
+		return null;
+	}
 };
 
 module.exports.weapons = async (search) => {
@@ -28,3 +31,16 @@ module.exports.potions = async (search) => {
 
 	return json;
 };
+
+module.exports.fetchCharacters = async () => {
+	const files = fs.readdirSync('assets/characters');
+	const charArray = [];
+
+	for (const charFile of files) {
+		const json = require(`./characters/${charFile}`);
+		charArray.push(json);
+	}
+
+	return charArray;
+};
+
